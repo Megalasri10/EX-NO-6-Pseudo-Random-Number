@@ -12,32 +12,37 @@ End the program.
 
 # PROGRAM:
 ```
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-int main()
+int main() 
 {
-    int n, i;
-
+    int count, min, max;
+    printf("Enter the number of random numbers to generate: ");
+    scanf("%d", &count);
+    printf("Enter the minimum value: ");
+    
+    scanf("%d", &min);
+    printf("Enter the maximum value: ");
+    scanf("%d", &max);
     srand(time(NULL));
-
-    printf("Enter the number of random numbers: ");
-    scanf("%d", &n);
-
-    printf("Generated Pseudorandom Numbers:\n");
-
-    for(i = 0; i < n; i++)
+    printf("Pseudorandom numbers:\n");   
+    for (int i = 0; i < count; i++) 
     {
-        printf("%d ", rand());
+        int random_number = (rand() % (max - min + 1)) + min;
+        printf("%d\n", random_number);
     }
-
-    return 0;
+return 0;
 }
+
 ```
 
 # OUTPUT:
-<img width="926" height="278" alt="image" src="https://github.com/user-attachments/assets/9da7f728-9d73-4b7c-8e91-a8340e0d6b57" />
+<img width="925" height="512" alt="image" src="https://github.com/user-attachments/assets/1af982f1-86d9-4415-9a34-a6050a3f56a2" />
+
 
 
 # RESULT:
